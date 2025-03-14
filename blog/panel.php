@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include "conexion.php";
 ?>
 
 <?php
@@ -13,3 +13,4 @@ session_start();
         print("Bienvenido Invitado");
         print("<a href='login.php'>Iniciar sesión</a>");    
     }
+?>
