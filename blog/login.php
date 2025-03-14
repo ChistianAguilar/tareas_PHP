@@ -9,19 +9,17 @@
 <body>
 
 <?php
-if(isset($_SESSION['nombre'])){
+if(isset($_SESSION['user'])){
     echo "<p> Bienvenido: " . $_SESSION['nombre'] . "!";
     echo "<p><a href='logout.php'> Cerrar Sesion</a></p>";
-    //echo "<br><p><a href='dashboard.php'> Ir al panel de control </a>";
+}else{
+    print("<from methol = 'POST' action = 'panel.php'>
+    <input typy = 'text' name = 'user' placeholder = 'Tu ususario'>
+    <button type = 'submit'> Acceder </button>
+    </form>");
 }
     
 ?>
-
-<h2>Acceder</h2>
-<form action="dashboard.php" method="POST">
-    <p> <input type="text" placeholder="Usuario:" name="nombre" required autofocus/> </p>
-    <p> <input type="submit" value="Acceder" /> </p>
-</form>
 
 </body>
 </html>
